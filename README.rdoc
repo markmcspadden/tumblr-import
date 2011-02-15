@@ -1,0 +1,31 @@
+= Tumblr Import
+
+Methods for migrating my very old mephisto data (for which I had a sql dump) and my kind of more recent blogger data to Tumblr. The goal is to migrate the articles...I could care less about the comments at this point.
+
+== WARNING
+
+If you use any Tumblr integrations (like twitter or facebook), turn those off before importing these feeds. If you don't every post you import now will be posted there. (This warning will also appear each time you run the script. Use `--skip-warning` flag to skip it.)
+
+== Mephisto to Tumblr
+
+=== Usage
+
+==== Load a sql dump and import
+
+MySQL table creation, upload, and Tumblr sync all at once
+
+`ruby mephisto-to-tumblr.rb --upload-sql TUMBLR_USER=your_tumblr_username TUMBLR_PASS=your_tumblr_password`
+
+NOTE: This assumes a sql file called mephisto_archives.sql that will create a mephisto_archives table with the root mysql user and no password on localhost. Please change if needed.
+
+==== Or just import (based on a previous sql dump load)
+
+`ruby mephisto-to-tumblr.rb TUMBLR_USER=your_tumblr_username TUMBLR_PASS=your_tumblr_password`
+
+== Blogger to Tumblr
+
+Coming Soon...
+
+== Credits
+
+Very heavily influenced one of Phil Toland's blog post: http://philtoland.com/post/464265345/importing-wordpress-content-into-tumblr
