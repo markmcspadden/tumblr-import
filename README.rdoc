@@ -14,13 +14,13 @@ If you use any Tumblr integrations (like twitter or facebook), turn those off be
 
 MySQL table creation, upload, and Tumblr sync all at once
 
-`ruby mephisto-to-tumblr.rb --upload-sql TUMBLR_USER=your_tumblr_username TUMBLR_PASS=your_tumblr_password`
+  `ruby mephisto-to-tumblr.rb --upload-sql TUMBLR_USER=your_tumblr_username TUMBLR_PASS=your_tumblr_password`
 
 NOTE: This assumes a sql file called mephisto_archives.sql that will create a mephisto_archives table with the root mysql user and no password on localhost. Please change if needed.
 
 ==== Or just import (based on a previous sql dump load)
 
-`ruby mephisto-to-tumblr.rb TUMBLR_USER=your_tumblr_username TUMBLR_PASS=your_tumblr_password`
+  `ruby mephisto-to-tumblr.rb TUMBLR_USER=your_tumblr_username TUMBLR_PASS=your_tumblr_password`
 
 == Blogger to Tumblr
 
